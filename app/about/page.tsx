@@ -55,6 +55,124 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Philosophy */}
+      <section className="py-24 px-6 bg-ark-dark">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4">Philosophy</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-16">What we believe.</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border-l-2 border-ark-accent pl-8">
+              <h3 className="text-xl font-semibold mb-3">Infrastructure over aesthetics</h3>
+              <p className="text-ark-light">A beautiful website that doesn&apos;t drive business is just expensive art. We build systems that work—and happen to look great.</p>
+            </div>
+            <div className="border-l-2 border-ark-border pl-8">
+              <h3 className="text-xl font-semibold mb-3">Results over activity</h3>
+              <p className="text-ark-light">We don&apos;t measure success by hours worked or deliverables shipped. We measure it by whether your business grew.</p>
+            </div>
+            <div className="border-l-2 border-ark-border pl-8">
+              <h3 className="text-xl font-semibold mb-3">Partnership over projects</h3>
+              <p className="text-ark-light">We&apos;re not looking for one-off engagements. We want to build relationships with businesses we believe in, for the long term.</p>
+            </div>
+            <div className="border-l-2 border-ark-border pl-8">
+              <h3 className="text-xl font-semibold mb-3">Clarity over complexity</h3>
+              <p className="text-ark-light">Technology should simplify your life, not complicate it. If we can&apos;t explain it simply, we haven&apos;t understood it well enough.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl">
+            <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4">Our Approach</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              We&apos;re not trying to be the biggest agency.
+            </h2>
+            <div className="text-lg text-ark-light space-y-6 leading-relaxed">
+              <p>
+                There are plenty of agencies that will take any client, deliver mediocre work, and move on to the next. That&apos;s not us.
+              </p>
+              <p>
+                We work with a small number of businesses at a time. We get to know them deeply. We care about their success because we&apos;re invested in it—our reputation depends on their results.
+              </p>
+              <p>
+                We&apos;re not for everyone. We work best with businesses that are ready to grow, willing to invest in their infrastructure, and value long-term relationships over quick wins.
+              </p>
+              <p className="text-ark-white font-medium text-xl mt-8">
+                If that sounds like you, we should talk.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-24 px-6 bg-ark-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4">Location</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Based in South Florida.<br />
+                Working globally.
+              </h2>
+              <p className="text-lg text-ark-light leading-relaxed mb-8">
+                Our home base is in South Florida, but our work extends far beyond. We serve clients across the United States and internationally, leveraging modern tools to collaborate effectively regardless of timezone.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <span className="px-3 py-1 bg-ark-gray rounded-full text-sm text-ark-light">Miami-Dade</span>
+                <span className="px-3 py-1 bg-ark-gray rounded-full text-sm text-ark-light">Broward</span>
+                <span className="px-3 py-1 bg-ark-gray rounded-full text-sm text-ark-light">Palm Beach</span>
+                <span className="px-3 py-1 bg-ark-gray rounded-full text-sm text-ark-light">USA</span>
+                <span className="px-3 py-1 bg-ark-gray rounded-full text-sm text-ark-light">LATAM</span>
+              </div>
+              <p className="text-ark-muted">
+                Fluent in English and Spanish. Portuguese coming soon.
+              </p>
+            </div>
+            <div className="gradient-border rounded-2xl p-8">
+              <p className="text-ark-accent font-semibold mb-6 uppercase text-sm tracking-wider">How We Work</p>
+              <ul className="space-y-4 text-ark-light">
+                {['Video calls for face-to-face collaboration', 'Shared workspaces for real-time progress', 'Async communication that respects your time', 'In-person meetings when local (SoFla)'].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4 text-center">What We Value</p>
+          <div className="grid md:grid-cols-4 gap-8 mt-16">
+            {[
+              { icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Honesty', desc: 'We tell you what you need to hear, not what you want to hear.', featured: true },
+              { icon: 'M13 10V3L4 14h7v7l9-11h-7z', title: 'Execution', desc: 'Ideas are cheap. We ship real work that drives real results.' },
+              { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', title: 'Partnership', desc: 'Your success is our success. We\'re in this together.' },
+              { icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z', title: 'Quality', desc: 'We\'d rather do fewer things exceptionally than many things poorly.' }
+            ].map(({ icon, title, desc, featured }) => (
+              <div key={title} className="text-center">
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl ${featured ? 'bg-ark-accent/10 border border-ark-accent/30' : 'bg-ark-gray'} flex items-center justify-center`}>
+                  <svg className={`w-7 h-7 ${featured ? 'text-ark-accent' : 'text-ark-light'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={icon} />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                <p className="text-ark-light text-sm">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 px-6 bg-ark-dark">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
