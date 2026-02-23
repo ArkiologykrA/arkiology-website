@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-ark-black: #0A0A0A;
+  --color-ark-dark: #111111;
+  --color-ark-darker: #0D0D0D;
+  --color-ark-gray: #1A1A1A;
+  --color-ark-border: #222222;
+  --color-ark-muted: #555555;
+  --color-ark-light: #999999;
+  --color-ark-white: #FAFAFA;
+  --color-ark-accent: #3B82F6;
+  --color-ark-accent-dark: #2563EB;
+  --color-ark-green: #22C55E;
+  
+  --font-family-sans: 'Space Grotesk', system-ui, sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-ark-black text-ark-white antialiased;
+  background-color: var(--color-ark-black);
+  color: var(--color-ark-white);
 }
 
 /* Gradient text utility */
