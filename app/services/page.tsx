@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services — Websites, Digital Marketing, Automations & AI",
+  description: "Four pillars of digital infrastructure: Custom website development, digital presence & SEO, business automations, and 24/7 AI employees. See what we build and how we can help your business grow.",
+  openGraph: {
+    title: "Our Services — Arkiology Digital Infrastructure",
+    description: "Custom websites, digital marketing, automations, and AI employees. Four pillars that work together to grow your business.",
+  },
+};
+
 export default function ServicesPage() {
   return (
     <main>

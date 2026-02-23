@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Digital Infrastructure Agency | Custom Websites & AI Automation",
+  description: "Stop paying for projects. Build infrastructure. Custom websites, digital marketing, automations, and 24/7 AI employees that grow your business while you sleep. Based in South Florida.",
+  openGraph: {
+    title: "Arkiology — Digital Infrastructure That Grows Your Business",
+    description: "Custom websites, digital marketing, automations, and 24/7 AI employees. We build the systems that grow your business while you sleep.",
+  },
+};
+
 export default function HomePage() {
   return (
     <>

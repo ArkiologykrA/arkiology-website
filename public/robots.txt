@@ -1,0 +1,15 @@
+# Arkiology - robots.txt
+# https://arkiology.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://arkiology.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
+
+# Block any admin or private routes (add as needed)
+# Disallow: /admin/
+# Disallow: /api/

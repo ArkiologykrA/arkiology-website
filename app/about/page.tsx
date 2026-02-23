@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About — The Science of Building Digital Foundations",
+  description: "Arkiology: Ark (foundation) + ology (the study of). We're a digital infrastructure agency based in South Florida, building the systems that help businesses grow. Meet the team behind the science.",
+  openGraph: {
+    title: "About Arkiology — Digital Infrastructure Agency",
+    description: "The science of building digital foundations. Based in South Florida, working globally.",
+  },
+};
+
 export default function AboutPage() {
   return (
     <main>
