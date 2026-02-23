@@ -1,13 +1,9 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'About — Arkiology',
-  description: 'The science of building digital foundations. We help businesses build infrastructure that grows.',
-};
-
-export default function AboutPage() {
+export default function About() {
   return (
     <>
+      {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="fade-up max-w-4xl">
@@ -23,6 +19,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* The Name */}
       <section className="py-24 px-6 border-t border-ark-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -134,14 +131,30 @@ export default function AboutPage() {
             <div className="gradient-border rounded-2xl p-8">
               <p className="text-ark-accent font-semibold mb-6 uppercase text-sm tracking-wider">How We Work</p>
               <ul className="space-y-4 text-ark-light">
-                {['Video calls for face-to-face collaboration', 'Shared workspaces for real-time progress', 'Async communication that respects your time', 'In-person meetings when local (SoFla)'].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Video calls for face-to-face collaboration</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Shared workspaces for real-time progress</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Async communication that respects your time</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>In-person meetings when local (SoFla)</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -153,26 +166,47 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4 text-center">What We Value</p>
           <div className="grid md:grid-cols-4 gap-8 mt-16">
-            {[
-              { icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Honesty', desc: 'We tell you what you need to hear, not what you want to hear.', featured: true },
-              { icon: 'M13 10V3L4 14h7v7l9-11h-7z', title: 'Execution', desc: 'Ideas are cheap. We ship real work that drives real results.' },
-              { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', title: 'Partnership', desc: 'Your success is our success. We\'re in this together.' },
-              { icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z', title: 'Quality', desc: 'We\'d rather do fewer things exceptionally than many things poorly.' }
-            ].map(({ icon, title, desc, featured }) => (
-              <div key={title} className="text-center">
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl ${featured ? 'bg-ark-accent/10 border border-ark-accent/30' : 'bg-ark-gray'} flex items-center justify-center`}>
-                  <svg className={`w-7 h-7 ${featured ? 'text-ark-accent' : 'text-ark-light'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={icon} />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{title}</h3>
-                <p className="text-ark-light text-sm">{desc}</p>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-accent/10 border border-ark-accent/30 flex items-center justify-center">
+                <svg className="w-7 h-7 text-ark-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-            ))}
+              <h3 className="text-lg font-semibold mb-2">Honesty</h3>
+              <p className="text-ark-light text-sm">We tell you what you need to hear, not what you want to hear.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-gray flex items-center justify-center">
+                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Execution</h3>
+              <p className="text-ark-light text-sm">Ideas are cheap. We ship real work that drives real results.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-gray flex items-center justify-center">
+                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Partnership</h3>
+              <p className="text-ark-light text-sm">Your success is our success. We&apos;re in this together.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-gray flex items-center justify-center">
+                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Quality</h3>
+              <p className="text-ark-light text-sm">We&apos;d rather do fewer things exceptionally than many things poorly.</p>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-24 px-6 bg-ark-dark">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
