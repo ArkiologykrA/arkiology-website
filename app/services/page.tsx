@@ -1,8 +1,6 @@
-import Link from 'next/link';
-
-export default function Services() {
+export default function ServicesPage() {
   return (
-    <>
+    <main>
       {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -16,18 +14,10 @@ export default function Services() {
               Every piece works together. Your website attracts. Your presence builds awareness. Your automations save time. Your AI closes the loop.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#websites" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors">
-                01 Websites
-              </a>
-              <a href="#presence" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors">
-                02 Digital Presence
-              </a>
-              <a href="#automations" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors">
-                03 Automations
-              </a>
-              <a href="#ai" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors">
-                04 AI Employees
-              </a>
+              <a href="#websites" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors cursor-pointer">01 Websites</a>
+              <a href="#presence" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors cursor-pointer">02 Digital Presence</a>
+              <a href="#automations" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors cursor-pointer">03 Automations</a>
+              <a href="#ai" className="px-4 py-2 border border-ark-border rounded-lg text-sm hover:border-ark-accent hover:text-ark-accent transition-colors cursor-pointer">04 AI Employees</a>
             </div>
           </div>
         </div>
@@ -47,34 +37,26 @@ export default function Services() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Custom design tailored to your brand</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Mobile-first, fast-loading architecture</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>SEO-ready from day one</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Conversion-focused user experience</span>
                 </li>
               </ul>
               <p className="text-ark-muted text-sm">Typical timeline: 4-8 weeks</p>
             </div>
             <div className="service-block gradient-border rounded-2xl p-8">
-              <p className="text-ark-muted uppercase text-sm tracking-wider mb-6">What&apos;s Included</p>
+              <p className="text-ark-muted uppercase text-sm tracking-wider mb-6">What's Included</p>
               <ul className="space-y-3 text-ark-light mb-8">
                 <li className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 bg-ark-accent rounded-full"></span>
@@ -105,12 +87,10 @@ export default function Services() {
                   Training & documentation
                 </li>
               </ul>
-              <Link href="/contact" className="inline-flex items-center gap-2 text-ark-accent font-medium hover:gap-3 transition-all">
+              <a href="/contact" className="inline-flex items-center gap-2 text-ark-accent font-medium cursor-pointer hover:gap-3 transition-all">
                 Get a quote
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -121,7 +101,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="order-2 lg:order-1 service-block gradient-border rounded-2xl p-8">
-              <p className="text-ark-muted uppercase text-sm tracking-wider mb-6">What&apos;s Included</p>
+              <p className="text-ark-muted uppercase text-sm tracking-wider mb-6">What's Included</p>
               <ul className="space-y-3 text-ark-light mb-8">
                 <li className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 bg-ark-accent rounded-full"></span>
@@ -152,12 +132,10 @@ export default function Services() {
                   Ongoing optimization
                 </li>
               </ul>
-              <Link href="/contact" className="inline-flex items-center gap-2 text-ark-accent font-medium hover:gap-3 transition-all">
+              <a href="/contact" className="inline-flex items-center gap-2 text-ark-accent font-medium cursor-pointer hover:gap-3 transition-all">
                 Get a quote
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
             </div>
             <div className="order-1 lg:order-2">
               <div className="w-20 h-20 rounded-2xl bg-ark-gray flex items-center justify-center mb-8">
@@ -169,21 +147,15 @@ export default function Services() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Get found when people search for your services</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Build awareness with targeted advertising</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Track ROI on every marketing dollar</span>
                 </li>
               </ul>
@@ -207,27 +179,19 @@ export default function Services() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>CRM integrations & data sync</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Automated email sequences</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Lead routing & notifications</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Reporting & dashboard automation</span>
                 </li>
               </ul>
@@ -261,12 +225,10 @@ export default function Services() {
                   <span>Weekly report generation</span>
                 </li>
               </ul>
-              <Link href="/contact" className="inline-flex items-center gap-2 text-ark-accent font-medium hover:gap-3 transition-all">
+              <a href="/contact" className="inline-flex items-center gap-2 text-ark-accent font-medium cursor-pointer hover:gap-3 transition-all">
                 Get a quote
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -286,54 +248,38 @@ export default function Services() {
               <p className="text-ark-accent uppercase text-sm tracking-wider mb-6 font-semibold">Capabilities</p>
               <ul className="space-y-3 text-ark-light mb-8">
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   24/7 lead response
                 </li>
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   Customer Q&A handling
                 </li>
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   Appointment booking
                 </li>
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   Lead qualification
                 </li>
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   Multi-channel (Web, WhatsApp, SMS, IG)
                 </li>
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   Your brand voice
                 </li>
                 <li className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-4 h-4 text-ark-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   Human handoff when needed
                 </li>
               </ul>
-              <Link href="/ai-employees" className="inline-flex items-center gap-2 text-ark-accent font-medium hover:gap-3 transition-all">
+              <a href="/ai-employees" className="inline-flex items-center gap-2 text-ark-accent font-medium cursor-pointer hover:gap-3 transition-all">
                 Learn more
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
             </div>
             <div className="order-1 lg:order-2">
               <div className="w-20 h-20 rounded-2xl bg-ark-accent flex items-center justify-center mb-8">
@@ -345,21 +291,15 @@ export default function Services() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Never miss another lead</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Instant responses, any time of day</span>
                 </li>
                 <li className="flex items-start gap-3 text-ark-light">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Trained specifically on your business</span>
                 </li>
               </ul>
@@ -382,7 +322,7 @@ export default function Services() {
                 <span className="text-2xl font-bold text-ark-accent">01</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Discovery</h3>
-              <p className="text-ark-light">We learn your business. Goals, customers, what&apos;s working, what isn&apos;t. No assumptions—just understanding.</p>
+              <p className="text-ark-light">We learn your business. Goals, customers, what's working, what isn't. No assumptions—just understanding.</p>
               <p className="text-ark-muted text-sm mt-4">Week 1-2</p>
             </div>
             <div className="text-center">
@@ -398,7 +338,7 @@ export default function Services() {
                 <span className="text-2xl font-bold text-white">03</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Launch + Grow</h3>
-              <p className="text-ark-light">We don&apos;t disappear after launch. Ongoing support, optimization, and growth. True partnership.</p>
+              <p className="text-ark-light">We don't disappear after launch. Ongoing support, optimization, and growth. True partnership.</p>
               <p className="text-ark-muted text-sm mt-4">Ongoing</p>
             </div>
           </div>
@@ -412,16 +352,14 @@ export default function Services() {
             Ready to build your foundation?
           </h2>
           <p className="text-xl text-ark-black/70 max-w-xl mx-auto mb-12">
-            Tell us about your business. We&apos;ll tell you how we can help.
+            Tell us about your business. We'll tell you how we can help.
           </p>
-          <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-ark-black text-ark-white px-10 py-5 text-lg font-medium hover:bg-ark-dark transition-colors">
+          <a href="/contact" className="inline-flex items-center justify-center gap-3 bg-ark-black text-ark-white px-10 py-5 text-lg font-medium hover:bg-ark-dark transition-colors cursor-pointer">
             Start a Project
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
         </div>
       </section>
-    </>
+    </main>
   );
 }

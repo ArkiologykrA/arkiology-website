@@ -1,8 +1,6 @@
-import Link from 'next/link';
-
-export default function About() {
+export default function AboutPage() {
   return (
-    <>
+    <main>
       {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -26,7 +24,7 @@ export default function About() {
             <div>
               <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-6">The Name</p>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-                Why &quot;Arkiology&quot;
+                Why "Arkiology"
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-6">
@@ -60,19 +58,19 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border-l-2 border-ark-accent pl-8">
               <h3 className="text-xl font-semibold mb-3">Infrastructure over aesthetics</h3>
-              <p className="text-ark-light">A beautiful website that doesn&apos;t drive business is just expensive art. We build systems that work—and happen to look great.</p>
+              <p className="text-ark-light">A beautiful website that doesn't drive business is just expensive art. We build systems that work—and happen to look great.</p>
             </div>
             <div className="border-l-2 border-ark-border pl-8">
               <h3 className="text-xl font-semibold mb-3">Results over activity</h3>
-              <p className="text-ark-light">We don&apos;t measure success by hours worked or deliverables shipped. We measure it by whether your business grew.</p>
+              <p className="text-ark-light">We don't measure success by hours worked or deliverables shipped. We measure it by whether your business grew.</p>
             </div>
             <div className="border-l-2 border-ark-border pl-8">
               <h3 className="text-xl font-semibold mb-3">Partnership over projects</h3>
-              <p className="text-ark-light">We&apos;re not looking for one-off engagements. We want to build relationships with businesses we believe in, for the long term.</p>
+              <p className="text-ark-light">We're not looking for one-off engagements. We want to build relationships with businesses we believe in, for the long term.</p>
             </div>
             <div className="border-l-2 border-ark-border pl-8">
               <h3 className="text-xl font-semibold mb-3">Clarity over complexity</h3>
-              <p className="text-ark-light">Technology should simplify your life, not complicate it. If we can&apos;t explain it simply, we haven&apos;t understood it well enough.</p>
+              <p className="text-ark-light">Technology should simplify your life, not complicate it. If we can't explain it simply, we haven't understood it well enough.</p>
             </div>
           </div>
         </div>
@@ -84,17 +82,17 @@ export default function About() {
           <div className="max-w-3xl">
             <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4">Our Approach</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              We&apos;re not trying to be the biggest agency.
+              We're not trying to be the biggest agency.
             </h2>
             <div className="text-lg text-ark-light space-y-6 leading-relaxed">
               <p>
-                There are plenty of agencies that will take any client, deliver mediocre work, and move on to the next. That&apos;s not us.
+                There are plenty of agencies that will take any client, deliver mediocre work, and move on to the next. That's not us.
               </p>
               <p>
-                We work with a small number of businesses at a time. We get to know them deeply. We care about their success because we&apos;re invested in it—our reputation depends on their results.
+                We work with a small number of businesses at a time. We get to know them deeply. We care about their success because we're invested in it—our reputation depends on their results.
               </p>
               <p>
-                We&apos;re not for everyone. We work best with businesses that are ready to grow, willing to invest in their infrastructure, and value long-term relationships over quick wins.
+                We're not for everyone. We work best with businesses that are ready to grow, willing to invest in their infrastructure, and value long-term relationships over quick wins.
               </p>
               <p className="text-ark-white font-medium text-xl mt-8">
                 If that sounds like you, we should talk.
@@ -111,8 +109,7 @@ export default function About() {
             <div>
               <p className="text-ark-accent text-sm uppercase tracking-[0.2em] mb-4">Location</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Based in South Florida.<br />
-                Working globally.
+                Based in South Florida.<br />Working globally.
               </h2>
               <p className="text-lg text-ark-light leading-relaxed mb-8">
                 Our home base is in South Florida, but our work extends far beyond. We serve clients across the United States and internationally, leveraging modern tools to collaborate effectively regardless of timezone.
@@ -132,27 +129,19 @@ export default function About() {
               <p className="text-ark-accent font-semibold mb-6 uppercase text-sm tracking-wider">How We Work</p>
               <ul className="space-y-4 text-ark-light">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Video calls for face-to-face collaboration</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Shared workspaces for real-time progress</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>Async communication that respects your time</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <svg className="w-5 h-5 text-ark-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   <span>In-person meetings when local (SoFla)</span>
                 </li>
               </ul>
@@ -168,39 +157,31 @@ export default function About() {
           <div className="grid md:grid-cols-4 gap-8 mt-16">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-accent/10 border border-ark-accent/30 flex items-center justify-center">
-                <svg className="w-7 h-7 text-ark-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                <svg className="w-7 h-7 text-ark-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
               <h3 className="text-lg font-semibold mb-2">Honesty</h3>
               <p className="text-ark-light text-sm">We tell you what you need to hear, not what you want to hear.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-gray flex items-center justify-center">
-                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
               </div>
               <h3 className="text-lg font-semibold mb-2">Execution</h3>
               <p className="text-ark-light text-sm">Ideas are cheap. We ship real work that drives real results.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-gray flex items-center justify-center">
-                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
               </div>
               <h3 className="text-lg font-semibold mb-2">Partnership</h3>
-              <p className="text-ark-light text-sm">Your success is our success. We&apos;re in this together.</p>
+              <p className="text-ark-light text-sm">Your success is our success. We're in this together.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-ark-gray flex items-center justify-center">
-                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
+                <svg className="w-7 h-7 text-ark-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
               </div>
               <h3 className="text-lg font-semibold mb-2">Quality</h3>
-              <p className="text-ark-light text-sm">We&apos;d rather do fewer things exceptionally than many things poorly.</p>
+              <p className="text-ark-light text-sm">We'd rather do fewer things exceptionally than many things poorly.</p>
             </div>
           </div>
         </div>
@@ -213,16 +194,14 @@ export default function About() {
             Want to work with us?
           </h2>
           <p className="text-xl text-ark-light max-w-xl mx-auto mb-12">
-            Let&apos;s talk about your business and see if we&apos;re a good fit.
+            Let's talk about your business and see if we're a good fit.
           </p>
-          <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-ark-white text-ark-black px-10 py-5 text-lg font-medium hover:bg-ark-light transition-colors">
+          <a href="/contact" className="inline-flex items-center justify-center gap-3 bg-ark-white text-ark-black px-10 py-5 text-lg font-medium hover:bg-ark-light transition-colors cursor-pointer">
             Start a Conversation
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
         </div>
       </section>
-    </>
+    </main>
   );
 }
