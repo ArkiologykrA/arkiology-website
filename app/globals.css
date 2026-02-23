@@ -25,6 +25,7 @@ html {
 body {
   background-color: var(--color-ark-black);
   color: var(--color-ark-white);
+  font-family: var(--font-family-sans);
 }
 
 /* Gradient text utility */
@@ -68,6 +69,7 @@ body {
 }
 
 .fade-up {
+  opacity: 0;
   animation: fadeUp 0.8s ease-out forwards;
 }
 
