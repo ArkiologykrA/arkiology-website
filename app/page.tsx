@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 export default function HomePage() {
   return (
     <>
+      <main>
       {/* 1. Hero */}
       <section className="min-h-screen flex flex-col justify-center px-6 pt-20">
         <div className="max-w-7xl mx-auto w-full">
