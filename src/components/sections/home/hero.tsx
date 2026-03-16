@@ -43,7 +43,7 @@ function RotatingWord() {
       <AnimatePresence mode="wait">
         <motion.span
           key={ROTATING_WORDS[index]}
-          className="inline-block text-accent"
+          className="inline-block text-foreground"
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
@@ -96,7 +96,7 @@ export function Hero() {
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
         >
-          <span className="text-foreground">Stop paying for </span>
+          <span className="text-gradient">Stop paying for </span>
           <RotatingWord />
           <br />
           <span className="text-foreground">
