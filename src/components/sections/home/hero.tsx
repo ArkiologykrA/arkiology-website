@@ -19,11 +19,11 @@ const STAGGER_DELAY = 0.15;
 
 const ROTATING_WORDS = [
   "Websites",
-  "Leads",
+  "Agencies",
   "Marketing",
-  "SEO",
-  "AI Tools",
-  "Ads",
+  "Campaigns",
+  "Redesigns",
+  "Templates",
 ];
 
 function RotatingWord() {
