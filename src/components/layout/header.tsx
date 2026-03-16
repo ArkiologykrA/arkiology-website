@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import { Magnetic } from "@/components/animations";
 import { Button } from "@/components/ui";
 
@@ -68,7 +69,7 @@ export function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex items-center justify-center bg-background"
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-background"
             initial={{ clipPath: "circle(0% at calc(100% - 3rem) 2rem)" }}
             animate={{
               clipPath: "circle(150% at calc(100% - 3rem) 2rem)",
@@ -76,6 +77,18 @@ export function Header() {
             exit={{ clipPath: "circle(0% at calc(100% - 3rem) 2rem)" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           >
+            {/* Close button */}
+            <motion.button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-5 right-6 flex h-10 w-10 items-center justify-center rounded-full border border-border text-secondary hover:text-foreground hover:border-foreground transition-colors"
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" />
+            </motion.button>
+
             <div className="flex flex-col items-center gap-3">
               {NAV_LINKS.map((link, i) => (
                 <motion.div
