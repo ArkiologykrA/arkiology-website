@@ -39,11 +39,17 @@ function RotatingWord() {
   }, [advance]);
 
   return (
-    <span className="relative inline-block overflow-hidden align-bottom" style={{ minWidth: "4ch" }}>
+    <span className="relative inline-flex justify-center align-bottom overflow-hidden">
+      {/* Invisible words to set the width to the longest word */}
+      {ROTATING_WORDS.map((word) => (
+        <span key={word} className="invisible h-0 block" aria-hidden>
+          {word}
+        </span>
+      ))}
       <AnimatePresence mode="wait">
         <motion.span
           key={ROTATING_WORDS[index]}
-          className="inline-block text-foreground"
+          className="absolute inset-0 flex items-center justify-center text-foreground"
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
