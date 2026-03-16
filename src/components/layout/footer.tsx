@@ -25,9 +25,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { label: "X", href: "https://twitter.com/arkiology" },
-  { label: "LI", href: "https://linkedin.com/company/arkiology" },
-  { label: "IG", href: "https://instagram.com/arkiology" },
+  { label: "X", href: "https://twitter.com/arkiology", ariaLabel: "Follow Arkiology on X (Twitter)" },
+  { label: "LI", href: "https://linkedin.com/company/arkiology", ariaLabel: "Follow Arkiology on LinkedIn" },
+  { label: "IG", href: "https://instagram.com/arkiology", ariaLabel: "Follow Arkiology on Instagram" },
 ];
 
 export function Footer() {
@@ -127,6 +127,7 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={link.ariaLabel}
                 className="text-xs text-muted tracking-[1px] transition-colors hover:text-foreground"
               >
                 {link.label}

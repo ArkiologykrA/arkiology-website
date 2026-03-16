@@ -7,7 +7,7 @@
 
   --fg: #fafafa;
   --fg-secondary: #999999;
-  --fg-muted: #555555;
+  --fg-muted: #737373;
   --fg-dim: #333333;
   --fg-ghost: #222222;
 
@@ -33,11 +33,13 @@
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-success: var(--success);
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-space-grotesk);
 }
 
-* { cursor: none; }
+@media (pointer: fine) {
+  * { cursor: none; }
+}
 
 html { scroll-behavior: auto; }
 
@@ -145,6 +147,9 @@ html.lenis, html.lenis body { height: auto; }
   * { scroll-behavior: auto !important; }
 }
 
-/* Hide scrollbar */
-::-webkit-scrollbar { display: none; }
-html { -ms-overflow-style: none; scrollbar-width: none; }
+/* Minimal scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+html { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
