@@ -1,8 +1,8 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Badge, Button } from "@/components/ui";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -16,6 +16,45 @@ const ParticleMeshCanvas = dynamic(
 );
 
 const STAGGER_DELAY = 0.15;
+
+const ROTATING_WORDS = [
+  "Websites",
+  "Leads",
+  "Marketing",
+  "SEO",
+  "AI Tools",
+  "Email Campaigns",
+];
+
+function RotatingWord() {
+  const [index, setIndex] = useState(0);
+
+  const advance = useCallback(() => {
+    setIndex((prev) => (prev + 1) % ROTATING_WORDS.length);
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(advance, 1500);
+    return () => clearInterval(id);
+  }, [advance]);
+
+  return (
+    <span className="relative inline-block overflow-hidden align-bottom" style={{ minWidth: "4ch" }}>
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={ROTATING_WORDS[index]}
+          className="inline-block text-accent"
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: "0%", opacity: 1 }}
+          exit={{ y: "-100%", opacity: 0 }}
+          transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
+          {ROTATING_WORDS[index]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
 
 export function Hero() {
   return (
@@ -48,7 +87,7 @@ export function Hero() {
 
         {/* Headline */}
         <motion.h1
-          className="font-heading text-5xl font-bold leading-[0.95] tracking-tight md:text-7xl lg:text-8xl"
+          className="font-heading text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -57,16 +96,8 @@ export function Hero() {
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
         >
-          <span className="text-gradient">Stop paying for</span>
-          <br />
-          <span className="relative inline-block">
-            <span className="text-gradient">
-              <span className="relative">
-                projects.
-                <span className="absolute left-0 right-0 top-1/2 h-[3px] bg-accent" />
-              </span>
-            </span>
-          </span>
+          <span className="text-foreground">Stop paying for </span>
+          <RotatingWord />
           <br />
           <span className="text-foreground">
             Build <span className="text-accent">infrastructure.</span>
