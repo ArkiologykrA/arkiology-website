@@ -32,21 +32,12 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Digital Infrastructure Agency`,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Arkiology — Digital Infrastructure Agency",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Digital Infrastructure Agency`,
     description: siteConfig.description,
     creator: "@arkiology",
-    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
   alternates: {

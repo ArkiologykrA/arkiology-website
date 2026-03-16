@@ -48,8 +48,10 @@ export function Footer() {
             <Link
               href="/"
               className="font-heading text-2xl font-bold text-foreground"
+              aria-label="Arkiology — Home"
             >
-              ARK<span className="text-accent">&#9650;</span>OLOGY
+              <span aria-hidden="true">ARK<span className="text-accent">&#9650;</span>OLOGY</span>
+              <span className="sr-only">Arkiology</span>
             </Link>
             <p className="mt-4 text-sm text-muted leading-relaxed max-w-xs">
               The science of building digital foundations that protect and grow

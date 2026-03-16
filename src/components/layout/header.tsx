@@ -27,8 +27,10 @@ export function Header() {
         <Link
           href="/"
           className="font-heading text-xl font-bold tracking-tight text-foreground"
+          aria-label="Arkiology — Home"
         >
-          ARK<span className="text-accent">&#9650;</span>OLOGY
+          <span aria-hidden="true">ARK<span className="text-accent">&#9650;</span>OLOGY</span>
+          <span className="sr-only">Arkiology</span>
         </Link>
 
         {/* Desktop nav */}
