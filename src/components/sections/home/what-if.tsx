@@ -73,53 +73,50 @@ export function WhatIf() {
           </p>
         </Reveal>
 
-        <div className="mt-16 space-y-4">
+        <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {painVsSolution.map((item, i) => {
             const PainIcon = item.painIcon;
             return (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="group relative rounded-2xl border border-border bg-card/50 p-6 transition-all duration-500 hover:border-accent/40 hover:bg-card md:p-8">
-                  <div className="grid gap-6 md:grid-cols-[1fr,auto,1fr] md:items-center md:gap-8">
-                    {/* Pain */}
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-400 transition-colors group-hover:bg-red-500/15">
-                        <PainIcon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <div className="mb-1 flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-red-400">
-                          <X className="h-3 w-3" />
-                          The problem
-                        </div>
-                        <p className="text-sm leading-relaxed text-secondary md:text-base">
-                          {item.pain}
-                        </p>
-                      </div>
+                <div className="group relative flex h-full flex-col rounded-2xl border border-border bg-card/50 p-6 transition-all duration-500 hover:border-accent/40 hover:bg-card">
+                  {/* Pain */}
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-500/10 text-red-400 transition-colors group-hover:bg-red-500/15">
+                      <PainIcon className="h-4 w-4" />
                     </div>
-
-                    {/* Divider / Arrow */}
-                    <div className="hidden h-px w-16 bg-gradient-to-r from-red-500/30 via-border to-accent/30 md:block" />
-                    <div className="ml-14 h-px bg-gradient-to-r from-red-500/20 via-border to-accent/20 md:hidden" />
-
-                    {/* Solution */}
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent/15">
-                        <Check className="h-5 w-5" />
+                    <div>
+                      <div className="mb-1 flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wider text-red-400">
+                        <X className="h-2.5 w-2.5" />
+                        The problem
                       </div>
-                      <div>
-                        <div className="mb-1 flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-accent">
-                          <ArrowRight className="h-3 w-3" />
-                          What we build
-                        </div>
-                        <p className="text-sm leading-relaxed text-foreground md:text-base">
-                          {item.solution}
-                        </p>
+                      <p className="text-sm leading-relaxed text-secondary">
+                        {item.pain}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="my-4 h-px w-full bg-gradient-to-r from-red-500/20 via-border to-accent/20" />
+
+                  {/* Solution */}
+                  <div className="flex flex-1 items-start gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent/15">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div className="mb-1 flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wider text-accent">
+                        <ArrowRight className="h-2.5 w-2.5" />
+                        What we build
                       </div>
+                      <p className="text-sm leading-relaxed text-foreground">
+                        {item.solution}
+                      </p>
                     </div>
                   </div>
 
                   {/* Stat pill */}
                   <motion.div
-                    className="absolute right-6 top-6 rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-xs font-medium text-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    className="mt-4 self-start rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-xs font-medium text-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     aria-hidden
                   >
                     {item.stat}
