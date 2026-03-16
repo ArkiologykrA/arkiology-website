@@ -23,7 +23,7 @@ const ROTATING_WORDS = [
   "Marketing",
   "SEO",
   "AI Tools",
-  "Email Campaigns",
+  "Ads",
 ];
 
 function RotatingWord() {
@@ -39,17 +39,20 @@ function RotatingWord() {
   }, [advance]);
 
   return (
-    <span className="relative inline-flex justify-center align-bottom overflow-hidden">
-      {/* Invisible words to set the width to the longest word */}
+    <span className="inline-grid overflow-hidden align-bottom">
       {ROTATING_WORDS.map((word) => (
-        <span key={word} className="invisible h-0 block" aria-hidden>
+        <span
+          key={word}
+          className="pointer-events-none invisible col-start-1 row-start-1 select-none"
+          aria-hidden
+        >
           {word}
         </span>
       ))}
       <AnimatePresence mode="wait">
         <motion.span
           key={ROTATING_WORDS[index]}
-          className="absolute inset-0 flex items-center justify-center text-foreground"
+          className="col-start-1 row-start-1 text-foreground"
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
