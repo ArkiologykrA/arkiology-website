@@ -1,0 +1,16 @@
+export { Hero } from "./hero";
+export { Marquee } from "./marquee";
+export { WhatIf } from "./what-if";
+export { Problem } from "./problem";
+export { ServicesGrid } from "./services-grid";
+export { WhyUs } from "./why-us";
+export { LiveDemo } from "./live-demo";
+export { Etymology } from "./etymology";
+export { WhoWeServe } from "./who-we-serve";
+export { ProcessTimeline } from "./process-timeline";
+export { Results } from "./results";
+export { StatsBar } from "./stats-bar";
+export { FAQ } from "./faq";
+export { Testimonials } from "./testimonials";
+export { Promise } from "./promise";
+export { CTA } from "./cta";

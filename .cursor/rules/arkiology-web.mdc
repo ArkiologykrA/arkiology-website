@@ -1,0 +1,88 @@
+---
+description: Arkiology website project conventions, architecture, and coding standards
+globs: "**/*.{ts,tsx,css,mjs}"
+alwaysApply: false
+---
+
+# Arkiology Website — Project Conventions
+
+## Stack
+- **Framework:** Next.js 16 (App Router, React 19)
+- **Language:** TypeScript (strict mode)
+- **Styling:** Tailwind CSS v4 (CSS-first `@theme inline`) + CVA + `cn()`
+- **Animations:** GSAP 3 + ScrollTrigger, Framer Motion 12, Lenis
+- **3D:** Three.js + React Three Fiber + Drei
+- **Icons:** Lucide React
+- **Email:** Resend (contact form API)
+- **Fonts:** Space Grotesk (self-hosted via `next/font/google`)
+
+## Architecture
+
+```
+src/
+├── app/              # Next.js App Router
+│   ├── (marketing)/  # Route group: shared layout (Header, Footer, Cursor, Lenis)
+│   ├── api/          # API routes (contact form)
+│   └── globals.css   # Tailwind v4 @theme + global styles
+├── components/
+│   ├── animations/   # Reveal, Magnetic, Parallax, TextReveal, StaggerContainer
+│   ├── three/        # R3F components (ParticleMesh)
+│   ├── sections/     # Page-specific sections (home/, about/, etc.)
+│   ├── layout/       # Header, Footer
+│   └── ui/           # Design system primitives (Button, Card, Badge, Input, SectionLabel)
+├── config/           # Site metadata, nav items
+├── context/          # SmoothScrollProvider
+├── data/             # Static data (services, FAQ, testimonials, case studies)
+├── hooks/            # Custom hooks (useIntersection, useMousePosition, etc.)
+├── lib/              # Utilities and configs
+│   ├── animations/   # GSAP config + Framer Motion variants
+│   └── utils/        # cn() helper
+└── types/            # TypeScript interfaces
+```
+
+## Conventions
+
+### Components
+- **Server Components by default.** Only add `"use client"` when the component uses hooks, event handlers, or browser APIs.
+- **Barrel exports** in every directory via `index.ts`.
+- **CVA for component variants** (`class-variance-authority`), `cn()` for class merging.
+- **Props interfaces** defined inline or in `types/index.ts` if shared.
+
+### Animations
+- **Framer Motion** for declarative React animations (reveals, hovers, layout animations, page transitions).
+- **GSAP + ScrollTrigger** for timeline-based, scroll-driven, and performance-critical animations.
+- **Lenis** for smooth scroll via `SmoothScrollProvider`.
+- **`useReducedMotion`** — always respect `prefers-reduced-motion`.
+- Target: **60fps** — keep frame budget under 16ms.
+
+### Styling
+- Tailwind v4 with `@theme inline` block in `globals.css`.
+- **Design tokens** use CSS custom properties (`--bg-primary`, `--accent`, etc.).
+- Color classes: `text-foreground`, `text-secondary`, `text-muted`, `bg-surface`, `bg-elevated`, `border-border`, `text-accent`.
+- Never hardcode hex values in components — use token classes.
+- Typography: `font-heading` for headings, `font-body` for body text.
+
+### Three.js / R3F
+- Always `dynamic(() => import(...), { ssr: false })` for Three.js components.
+- Wrap in `<Suspense>` with a fallback gradient.
+- Keep R3F components in `components/three/`.
+- Target: `dpr={[1, 1.5]}` for performance.
+
+### Data
+- Static data lives in `src/data/` as typed TypeScript files.
+- Types in `src/types/index.ts`.
+- No CMS for now — content changes are code changes.
+
+### Performance
+- Self-hosted fonts via `next/font/google` (zero CLS).
+- Dynamic imports for heavy components (Three.js, GSAP timelines).
+- Images via `next/image` with responsive `sizes` prop.
+- Target: LCP <= 2.5s, INP <= 200ms, CLS <= 0.1.
+
+## Brand Identity
+- **Name:** Arkiology
+- **Logo:** ARK▲OLOGY (triangle is `text-accent`)
+- **Tagline:** Build Infrastructure, Not Projects
+- **Colors:** Dark theme — `#0A0A0A` background, `#FAFAFA` text, `#3B82F6` accent
+- **Font:** Space Grotesk (all weights)
+- **Symbol:** ▲ (triangle)
