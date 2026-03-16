@@ -1,7 +1,7 @@
 "use client";
 
 import { Header, Footer } from "@/components/layout";
-import { CursorFollower } from "@/components/ui";
+import { CursorFollower, StickyMobileCTA } from "@/components/ui";
 import { SmoothScrollProvider } from "@/context/smooth-scroll-provider";
 
 export default function MarketingLayout({
@@ -22,6 +22,7 @@ export default function MarketingLayout({
       <Header />
       <main id="main-content">{children}</main>
       <Footer />
+      <StickyMobileCTA />
     </SmoothScrollProvider>
   );
 }

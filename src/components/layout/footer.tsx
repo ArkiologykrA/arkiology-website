@@ -35,7 +35,7 @@ export function Footer() {
   const isInView = useInView(ref, { amount: 0.3, once: true });
 
   return (
-    <footer ref={ref} className="border-t border-border bg-background">
+    <footer ref={ref} className="border-t border-border bg-background" aria-label="Site footer">
       <motion.div
         className="mx-auto max-w-7xl px-6 py-16"
         initial={{ opacity: 0, y: 40 }}
@@ -59,9 +59,9 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-4">
               Services
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
@@ -78,9 +78,9 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-4">
               Company
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -97,9 +97,9 @@ export function Footer() {
 
           {/* Legal + Social */}
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-4">
               Legal
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>

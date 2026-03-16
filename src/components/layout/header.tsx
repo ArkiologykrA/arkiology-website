@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { Magnetic } from "@/components/animations";
@@ -17,10 +18,11 @@ const NAV_LINKS = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <nav className="flex items-center justify-between px-6 py-4 bg-background/90 backdrop-blur-md border-b border-border">
+      <nav aria-label="Main navigation" className="flex items-center justify-between px-6 py-4 bg-background/90 backdrop-blur-md border-b border-border">
         {/* Logo */}
         <Link
           href="/"
@@ -31,18 +33,22 @@ export function Header() {
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Magnetic strength={0.2}>
-                <Link
-                  href={link.href}
-                  className="font-heading text-[11px] tracking-[3px] text-secondary transition-colors hover:text-foreground"
-                >
-                  {link.label}
-                </Link>
-              </Magnetic>
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+            return (
+              <li key={link.href}>
+                <Magnetic strength={0.2}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`font-heading text-[11px] tracking-[3px] transition-colors hover:text-foreground ${isActive ? "text-foreground" : "text-secondary"}`}
+                  >
+                    {link.label}
+                  </Link>
+                </Magnetic>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex items-center gap-4">

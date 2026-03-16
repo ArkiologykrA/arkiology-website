@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { ContactClient } from "@/components/sections/contact/contact-client";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us — Start Your Digital Infrastructure Project",
   description:
-    "Start a project with Arkiology. Tell us about your business and we\u2019ll respond within 24 hours.",
+    "Ready to build your digital infrastructure? Contact Arkiology for a free consultation. Websites, AI employees, automations, and digital marketing. 24-hour response guaranteed.",
+  alternates: { canonical: "https://arkiology.com/contact" },
 };
 
 export default function ContactPage() {
