@@ -52,7 +52,7 @@ Each of these services has their own privacy policy governing their use of your 
 - Opt out of any communications
 - Lodge a complaint with a supervisory authority
 
-To exercise any of these rights, contact us at hello@arkiology.com.`,
+To exercise any of these rights, contact us at contact@arkiology.com.`,
   },
   {
     title: "Cookies",
@@ -66,7 +66,7 @@ To exercise any of these rights, contact us at hello@arkiology.com.`,
     title: "Contact Us",
     content: `If you have questions about this privacy policy or how we handle your data, please contact us:
 
-- **Email:** hello@arkiology.com
+- **Email:** contact@arkiology.com
 - **Location:** South Florida, USA`,
   },
 ];

@@ -94,7 +94,7 @@ Our total liability shall not exceed the amount paid by the client for the speci
     title: "Contact",
     content: `For questions about these terms, please contact us:
 
-- **Email:** hello@arkiology.com
+- **Email:** contact@arkiology.com
 - **Location:** South Florida, USA`,
   },
 ];

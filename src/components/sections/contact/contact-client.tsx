@@ -108,10 +108,10 @@ export function ContactClient() {
                   <div>
                     <p className="text-muted uppercase text-sm tracking-wider mb-2">Email</p>
                     <a
-                      href="mailto:hello@arkiology.com"
+                      href="mailto:contact@arkiology.com"
                       className="text-xl hover:text-accent transition-colors"
                     >
-                      hello@arkiology.com
+                      contact@arkiology.com
                     </a>
                   </div>
                   <div>

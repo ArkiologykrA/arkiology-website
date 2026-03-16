@@ -7,7 +7,7 @@ export const siteConfig = {
   url: "https://arkiology.com",
   ogImage: "/og-image.png",
   creator: "Arkiology",
-  email: "hello@arkiology.com",
+  email: "contact@arkiology.com",
   location: "South Florida, USA",
   keywords: [
     "digital infrastructure",

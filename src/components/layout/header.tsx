@@ -131,10 +131,10 @@ export function Header() {
                 transition={{ delay: 0.8 }}
               >
                 <a
-                  href="mailto:hello@arkiology.com"
+                  href="mailto:contact@arkiology.com"
                   className="font-body text-xs tracking-[2px] text-muted transition-colors hover:text-foreground"
                 >
-                  hello@arkiology.com
+                  contact@arkiology.com
                 </a>
               </motion.div>
             </div>

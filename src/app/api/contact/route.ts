@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Arkiology Website <onboarding@resend.dev>",
-      to: ["hello@arkiology.com"],
+      to: ["contact@arkiology.com"],
       subject: `New Project Inquiry from ${name}`,
       html: `
         <h2>New Project Inquiry</h2>
