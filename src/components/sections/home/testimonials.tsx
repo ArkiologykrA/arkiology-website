@@ -3,9 +3,17 @@
 import { Star } from "lucide-react";
 import { SectionLabel, Card } from "@/components/ui";
 import { StaggerContainer, StaggerItem, Reveal } from "@/components/animations";
-import { testimonials } from "@/data";
 
-export function Testimonials() {
+interface SanityTestimonial {
+  _id: string;
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+  rating: number;
+}
+
+export function Testimonials({ testimonials }: { testimonials: SanityTestimonial[] }) {
   return (
     <section className="py-24 px-6 md:py-32">
       <div className="mx-auto max-w-7xl">
@@ -18,7 +26,7 @@ export function Testimonials() {
 
         <StaggerContainer className="mt-16 grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (
-            <StaggerItem key={testimonial.id}>
+            <StaggerItem key={testimonial._id}>
               <Card className="h-full flex flex-col">
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">

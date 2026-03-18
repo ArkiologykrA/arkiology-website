@@ -2,14 +2,26 @@
 
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import type { CaseStudy } from "@/types";
 import { SectionLabel, Card, Badge, Button } from "@/components/ui";
 import { Reveal, TextReveal, StaggerContainer, StaggerItem } from "@/components/animations";
-import { caseStudies } from "@/data/case-studies";
 
-export function CaseStudyDetail({ study }: { study: CaseStudy }) {
-  const currentIndex = caseStudies.findIndex((cs) => cs.slug === study.slug);
-  const nextStudy = caseStudies[(currentIndex + 1) % caseStudies.length];
+interface SanityCaseStudy {
+  _id: string;
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  results: { metric: string; value: string }[];
+  services: string[];
+  challenge: string;
+  solution: string;
+  outcome: string;
+  featured?: boolean;
+}
+
+export function CaseStudyDetail({ study, allCaseStudies }: { study: SanityCaseStudy; allCaseStudies: SanityCaseStudy[] }) {
+  const currentIndex = allCaseStudies.findIndex((cs) => cs.slug === study.slug);
+  const nextStudy = allCaseStudies[(currentIndex + 1) % allCaseStudies.length];
 
   return (
     <>

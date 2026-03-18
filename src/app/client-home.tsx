@@ -19,23 +19,30 @@ import {
   CTA,
 } from "@/components/sections/home";
 
-export default function ClientHome() {
+interface ClientHomeProps {
+  services: never[];
+  testimonials: never[];
+  faqs: never[];
+  processSteps: never[];
+}
+
+export default function ClientHome({ services, testimonials, faqs, processSteps }: ClientHomeProps) {
   return (
     <>
       <Hero />
       <Marquee />
       <WhatIf />
       <Problem />
-      <ServicesGrid />
+      <ServicesGrid services={services} />
       <WhyUs />
       <LiveDemo />
       <Etymology />
       <WhoWeServe />
-      <ProcessTimeline />
+      <ProcessTimeline processSteps={processSteps} />
       <Results />
       <StatsBar />
-      <FAQ />
-      <Testimonials />
+      <FAQ faqs={faqs} />
+      <Testimonials testimonials={testimonials} />
       <Promise />
       <CTA />
     </>

@@ -4,7 +4,6 @@ import { Globe, Search, Zap, Bot } from "lucide-react";
 import { motion } from "framer-motion";
 import { SectionLabel, Card, Badge } from "@/components/ui";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
-import { services } from "@/data";
 import Link from "next/link";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -14,7 +13,17 @@ const iconMap: Record<string, React.ReactNode> = {
   Bot: <Bot className="h-6 w-6" />,
 };
 
-export function ServicesGrid() {
+interface SanityService {
+  _id: string;
+  title: string;
+  slug: string;
+  description: string;
+  icon: string;
+  features: string[];
+  featured?: boolean;
+}
+
+export function ServicesGrid({ services }: { services: SanityService[] }) {
   return (
     <section className="py-24 px-6 md:py-32">
       <div className="mx-auto max-w-7xl">
@@ -27,8 +36,8 @@ export function ServicesGrid() {
 
         <StaggerContainer className="mt-16 grid gap-6 md:grid-cols-2">
           {services.map((service) => (
-            <StaggerItem key={service.id}>
-              <Link href={`/services#${service.id}`}>
+            <StaggerItem key={service._id}>
+              <Link href={`/services#${service.slug}`}>
                 <motion.div
                   className="group h-full"
                   whileHover={{ y: -4 }}

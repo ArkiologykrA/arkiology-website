@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { WorkClient } from "@/components/sections/work/work-client";
+import { getCaseStudies } from "@/sanity/lib/fetch";
 
 export const metadata: Metadata = {
   title: "Our Work — Case Studies & Portfolio",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://arkiology.com/work" },
 };
 
-export default function WorkPage() {
-  return <WorkClient />;
+export default async function WorkPage() {
+  const caseStudies = await getCaseStudies();
+  return <WorkClient caseStudies={caseStudies} />;
 }

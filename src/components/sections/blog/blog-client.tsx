@@ -5,7 +5,18 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Clock, Tag } from "lucide-react";
 import { SectionLabel, Card, Badge, Button } from "@/components/ui";
 import { Reveal, TextReveal, StaggerContainer, StaggerItem } from "@/components/animations";
-import { blogPosts } from "@/data/blog-posts";
+
+interface SanityBlogPost {
+  _id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  author: string;
+  tags: string[];
+}
 
 function formatDate(dateString: string) {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -15,7 +26,7 @@ function formatDate(dateString: string) {
   });
 }
 
-export function BlogClient() {
+export function BlogClient({ blogPosts }: { blogPosts: SanityBlogPost[] }) {
   const featured = blogPosts[0];
   const rest = blogPosts.slice(1);
 

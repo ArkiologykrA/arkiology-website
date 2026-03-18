@@ -4,10 +4,22 @@ import { useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
-import type { BlogPost } from "@/types";
 import { SectionLabel, Badge, Button } from "@/components/ui";
 import { Reveal, TextReveal } from "@/components/animations";
-import { blogPosts } from "@/data/blog-posts";
+import { PortableTextBody } from "@/sanity/lib/portable-text";
+
+interface SanityBlogPostFull {
+  _id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  body: unknown[];
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  author: string;
+  tags: string[];
+}
 
 function formatDate(dateString: string) {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -33,48 +45,10 @@ function ReadingProgress() {
   );
 }
 
-function MarkdownContent({ content }: { content: string }) {
-  const lines = content.split("\n");
-  const elements: React.ReactNode[] = [];
-  let key = 0;
-
-  for (const line of lines) {
-    if (line.startsWith("### ")) {
-      elements.push(
-        <h3 key={key++} className="font-heading text-xl font-bold mt-8 mb-3">
-          {line.replace("### ", "")}
-        </h3>
-      );
-    } else if (line.startsWith("## ")) {
-      elements.push(
-        <h2 key={key++} className="font-heading text-2xl font-bold mt-10 mb-4">
-          {line.replace("## ", "")}
-        </h2>
-      );
-    } else if (line.startsWith("- ")) {
-      elements.push(
-        <li key={key++} className="text-secondary leading-relaxed ml-4 list-disc">
-          {line.replace("- ", "")}
-        </li>
-      );
-    } else if (line.trim() === "") {
-      elements.push(<br key={key++} />);
-    } else {
-      elements.push(
-        <p key={key++} className="text-secondary leading-relaxed mb-4">
-          {line}
-        </p>
-      );
-    }
-  }
-
-  return <div className="prose-ark">{elements}</div>;
-}
-
-export function BlogPostDetail({ post }: { post: BlogPost }) {
+export function BlogPostDetail({ post, allPosts }: { post: SanityBlogPostFull; allPosts: { slug: string; title: string }[] }) {
   const contentRef = useRef<HTMLDivElement>(null);
-  const currentIndex = blogPosts.findIndex((p) => p.slug === post.slug);
-  const nextPost = blogPosts[(currentIndex + 1) % blogPosts.length];
+  const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
+  const nextPost = allPosts[(currentIndex + 1) % allPosts.length];
 
   return (
     <>
@@ -121,7 +95,7 @@ export function BlogPostDetail({ post }: { post: BlogPost }) {
         <div ref={contentRef} className="mx-auto max-w-3xl">
           <Reveal>
             <div className="border-t border-border pt-8">
-              <MarkdownContent content={post.content} />
+              <PortableTextBody value={post.body} />
             </div>
           </Reveal>
 

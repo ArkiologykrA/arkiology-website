@@ -5,9 +5,22 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionLabel, Card, Badge, Button } from "@/components/ui";
 import { Reveal, TextReveal, StaggerContainer, StaggerItem } from "@/components/animations";
-import { caseStudies } from "@/data/case-studies";
 
-export function WorkClient() {
+interface SanityCaseStudy {
+  _id: string;
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  results: { metric: string; value: string }[];
+  services: string[];
+  challenge: string;
+  solution: string;
+  outcome: string;
+  featured?: boolean;
+}
+
+export function WorkClient({ caseStudies }: { caseStudies: SanityCaseStudy[] }) {
   return (
     <>
       {/* Hero */}

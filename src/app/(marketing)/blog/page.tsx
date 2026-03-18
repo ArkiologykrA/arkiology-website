@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BlogClient } from "@/components/sections/blog/blog-client";
+import { getBlogPosts } from "@/sanity/lib/fetch";
 
 export const metadata: Metadata = {
   title: "Blog & Insights — Web Development, AI, SEO & Digital Growth",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://arkiology.com/blog" },
 };
 
-export default function BlogPage() {
-  return <BlogClient />;
+export default async function BlogPage() {
+  const blogPosts = await getBlogPosts();
+  return <BlogClient blogPosts={blogPosts} />;
 }

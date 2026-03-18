@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { SectionLabel } from "@/components/ui";
 import { Reveal } from "@/components/animations";
-import { homeFaqs } from "@/data";
 
 function FAQItem({
   question,
@@ -55,7 +54,13 @@ function FAQItem({
   );
 }
 
-export function FAQ() {
+interface SanityFaq {
+  _id: string;
+  question: string;
+  answer: string;
+}
+
+export function FAQ({ faqs }: { faqs: SanityFaq[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -69,7 +74,7 @@ export function FAQ() {
         </Reveal>
 
         <div className="mt-12">
-          {homeFaqs.map((faq, i) => (
+          {faqs.map((faq, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <FAQItem
                 question={faq.question}

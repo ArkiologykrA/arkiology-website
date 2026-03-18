@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ClientHome from "../client-home";
+import { getServices, getTestimonials, getFaqsByPage, getProcessSteps } from "@/sanity/lib/fetch";
 
 export const metadata: Metadata = {
   title: "Arkiology | Digital Infrastructure Agency — Websites, AI Employees & Automations",
@@ -15,6 +16,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
-  return <ClientHome />;
+export default async function HomePage() {
+  const [services, testimonials, faqs, processSteps] = await Promise.all([
+    getServices(),
+    getTestimonials(),
+    getFaqsByPage("home"),
+    getProcessSteps(),
+  ]);
+
+  return (
+    <ClientHome
+      services={services}
+      testimonials={testimonials}
+      faqs={faqs}
+      processSteps={processSteps}
+    />
+  );
 }

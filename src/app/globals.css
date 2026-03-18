@@ -39,6 +39,7 @@
 
 @media (pointer: fine) {
   * { cursor: none; }
+  .sanity-studio-wrapper, .sanity-studio-wrapper * { cursor: auto !important; }
 }
 
 html { scroll-behavior: auto; }

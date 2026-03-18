@@ -4,9 +4,16 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SectionLabel } from "@/components/ui";
 import { Reveal } from "@/components/animations";
-import { processSteps } from "@/data";
 
-export function ProcessTimeline() {
+interface SanityProcessStep {
+  _id: string;
+  week: string;
+  title: string;
+  description: string;
+  deliverables: string[];
+}
+
+export function ProcessTimeline({ processSteps }: { processSteps: SanityProcessStep[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
